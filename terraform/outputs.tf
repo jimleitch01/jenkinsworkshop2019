@@ -1,5 +1,5 @@
 output "hostname" {
-  value = "var.hostname"
+  value = "${var.hostname}"
 }
 
 # output "vm_fqdn" {

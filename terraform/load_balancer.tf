@@ -1,15 +1,15 @@
 resource "azurerm_public_ip" "lbpip" {
   name                = "${var.rg_prefix}-ip"
-  location            = "var.location"
-  resource_group_name = "azurerm_resource_group.rg.name"
+  location            = "${var.location}"
+  resource_group_name = "${azurerm_resource_group.rg.name}"
   allocation_method   = "Dynamic"
   domain_name_label   = "${var.lb_ip_dns_name}"
 }
 
 resource "azurerm_lb" "lb" {
-  resource_group_name = "azurerm_resource_group.rg.name"
+  resource_group_name = "${azurerm_resource_group.rg.name}"
   name                = "${var.rg_prefix}lb"
-  location            = "var.location"
+  location            = "${var.location}"
 
 
   frontend_ip_configuration {
@@ -19,13 +19,13 @@ resource "azurerm_lb" "lb" {
 }
 
 resource "azurerm_lb_backend_address_pool" "backend_pool" {
-  resource_group_name = "azurerm_resource_group.rg.name"
+  resource_group_name = "${azurerm_resource_group.rg.name}"
   loadbalancer_id     = "${azurerm_lb.lb.id}"
   name                = "BackendPool1"
 }
 
 resource "azurerm_lb_nat_rule" "tcp" {
-  resource_group_name = "azurerm_resource_group.rg.name"
+  resource_group_name = "${azurerm_resource_group.rg.name}"
   loadbalancer_id     = "${azurerm_lb.lb.id}"
   name                = "RDP-VM-${count.index}"
   protocol            = "tcp"

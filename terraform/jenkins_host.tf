@@ -1,7 +1,7 @@
 resource "azurerm_network_interface" "jenkins-nic" {
   name                = "jenkins-nic${count.index}"
   location            = "${var.location}"
-  resource_group_name = "azurerm_resource_group.rg.name"
+  resource_group_name = "${azurerm_resource_group.rg.name}"
   count               = "${var.number_of_jenkins}"
 
   ip_configuration {
@@ -14,7 +14,7 @@ resource "azurerm_network_interface" "jenkins-nic" {
 resource "azurerm_virtual_machine" "jenkins" {
   name                             = "jenkins-${count.index}"
   location                         = "${var.location}"
-  resource_group_name              = "azurerm_resource_group.rg.name"
+  resource_group_name              = "${azurerm_resource_group.rg.name}"
   vm_size                          = "${var.vm_size}"
   network_interface_ids            = ["${element(azurerm_network_interface.jenkins-nic.*.id, count.index, )}"]
   count                            = "${var.number_of_jenkins}"
@@ -39,16 +39,16 @@ resource "azurerm_virtual_machine" "jenkins" {
 
   os_profile {
     computer_name  = "jenkins-${count.index}"
-    admin_username = "var.admin_username"
-    admin_password = "var.admin_password"
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
   }
 
   os_profile_linux_config {
-    disable_password_authentication = true
-    ssh_keys {
-      key_data = "file(~/.ssh/id_rsa.pub)"
-      path     = "/home/${var.admin_username}/.ssh/authorized_keys"
-    }
+    disable_password_authentication = false
+    # ssh_keys {
+    #   key_data = "file(~/.ssh/id_rsa.pub)"
+    #   path     = "/home/${var.admin_username}/.ssh/authorized_keys"
+    # }
   }
 }
 

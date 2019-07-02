@@ -36,16 +36,16 @@ resource "azurerm_virtual_machine" "app-host" {
 
   os_profile {
     computer_name  = "app-host-${count.index}"
-    admin_username = "var.admin_username"
-    admin_password = "var.admin_password"
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
   }
 
   os_profile_linux_config {
     disable_password_authentication = false
-    ssh_keys {
-      key_data = "file('~/.ssh/id_rsa.pub')"
-      path     = "/home/${var.admin_username}/.ssh/authorized_keys"
-    }
+    # ssh_keys {
+    #   key_data = "file('~/.ssh/id_rsa.pub')"
+    #   path     = "/home/${var.admin_username}/.ssh/authorized_keys"
+    # }
   }
 }
 
