@@ -1,0 +1,12 @@
+<FirstLogonCommands>
+   <SynchronousCommand wcm:action="add">
+      <CommandLine>Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</CommandLine>
+      <Description>Description_of_command1</Description>
+      <Order>1</Order>
+   </SynchronousCommand>
+   <SynchronousCommand wcm:action="add">
+      <CommandLine>dir</CommandLine>
+      <Description>Description_of_command2</Description>
+      <Order>2</Order>
+   </SynchronousCommand>
+</FirstLogonCommands>
