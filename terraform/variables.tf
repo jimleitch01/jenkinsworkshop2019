@@ -11,19 +11,16 @@ variable "rg_prefix" {
 variable "hostname" {
   description = "VM name referenced also in storage-related names."
   default     = "defaulthostname"
-
 }
 
 variable "dns_name" {
   description = " Label for the Domain Name. Will be used to make up the FQDN. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system."
   default     = "jws2019"
-
 }
 
 variable "lb_ip_dns_name" {
   description = "DNS for Load Balancer IP"
   default     = "jws2019"
-
 }
 
 variable "location" {
@@ -101,12 +98,12 @@ variable "number_of_jenkins" {
   default     = "1"
 }
 
-variable "number_of_builders" {
+variable "number_of_build_hosts" {
   description = "number of builder hosts to be created"
   default     = "1"
 }
 
-variable "number_of_apphosts" {
+variable "number_of_app_hosts" {
   description = "number of apphosts to be created"
   default     = "1"
 }
@@ -120,3 +117,4 @@ variable "dnsimple_token" {
   description = "dnsimple_token"
   default     = ""
 }
+

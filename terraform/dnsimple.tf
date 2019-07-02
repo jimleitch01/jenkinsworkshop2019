@@ -1,6 +1,6 @@
 # Configure the DNSimple provider
 provider "dnsimple" {
-  token = "${var.dnsimple_token}"
+  token   = "${var.dnsimple_token}"
   account = "${var.dnsimple_account}"
 }
 
@@ -12,8 +12,5 @@ resource "dnsimple_record" "workstationlb" {
   type   = "CNAME"
   ttl    = 60
 }
-
-
-
 
 # workstations.test-rig.net	jws2019.jws2019

@@ -1,37 +1,39 @@
 resource "azurerm_public_ip" "lbpip" {
   name                = "${var.rg_prefix}-ip"
-  location            = "${var.location}"
-  resource_group_name = "${azurerm_resource_group.rg.name}"
+  location            = "var.location"
+  resource_group_name = "azurerm_resource_group.rg.name"
   allocation_method   = "Dynamic"
-  domain_name_label   = "${var.lb_ip_dns_name}"
+  domain_name_label   = "var.lb_ip_dns_name"
 }
 
 resource "azurerm_lb" "lb" {
-  resource_group_name = "${azurerm_resource_group.rg.name}"
+  resource_group_name = "azurerm_resource_group.rg.name"
   name                = "${var.rg_prefix}lb"
-  location            = "${var.location}"
+  location            = "var.location"
+
 
   frontend_ip_configuration {
     name                 = "LoadBalancerFrontEnd"
-    public_ip_address_id = "${azurerm_public_ip.lbpip.id}"
+    public_ip_address_id = "azurerm_public_ip.lbpip.id"
   }
 }
 
 resource "azurerm_lb_backend_address_pool" "backend_pool" {
-  resource_group_name = "${azurerm_resource_group.rg.name}"
-  loadbalancer_id     = "${azurerm_lb.lb.id}"
+  resource_group_name = "azurerm_resource_group.rg.name"
+  loadbalancer_id     = "azurerm_lb.lb.id"
   name                = "BackendPool1"
 }
 
 resource "azurerm_lb_nat_rule" "tcp" {
-  resource_group_name            = "${azurerm_resource_group.rg.name}"
-  loadbalancer_id                = "${azurerm_lb.lb.id}"
-  name                           = "RDP-VM-${count.index}"
-  protocol                       = "tcp"
-  frontend_port                  = "5000${count.index + 1}"
+  resource_group_name = "azurerm_resource_group.rg.name"
+  loadbalancer_id     = "azurerm_lb.lb.id"
+  name                = "RDP-VM-${count.index}"
+  protocol            = "tcp"
+  frontend_port       = "format(%05d, count.index + 50000)"
+
   backend_port                   = 3389
   frontend_ip_configuration_name = "LoadBalancerFrontEnd"
-  count                          = 2
+  count                          = "${var.number_of_workstations}"
 }
 
 # resource "azurerm_lb_rule" "lb_rule" {
@@ -48,7 +50,6 @@ resource "azurerm_lb_nat_rule" "tcp" {
 #   probe_id                       = "${azurerm_lb_probe.lb_probe.id}"
 #   depends_on                     = ["azurerm_lb_probe.lb_probe"]
 # }
-
 # resource "azurerm_lb_probe" "lb_probe" {
 #   resource_group_name = "${azurerm_resource_group.rg.name}"
 #   loadbalancer_id     = "${azurerm_lb.lb.id}"
@@ -58,15 +59,3 @@ resource "azurerm_lb_nat_rule" "tcp" {
 #   interval_in_seconds = 5
 #   number_of_probes    = 2
 # }
-
-
-
-
-
-
-
-
-
-
-
-
