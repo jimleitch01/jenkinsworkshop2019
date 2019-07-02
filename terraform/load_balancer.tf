@@ -3,7 +3,7 @@ resource "azurerm_public_ip" "lbpip" {
   location            = "var.location"
   resource_group_name = "azurerm_resource_group.rg.name"
   allocation_method   = "Dynamic"
-  domain_name_label   = "var.lb_ip_dns_name"
+  domain_name_label   = "${var.lb_ip_dns_name}"
 }
 
 resource "azurerm_lb" "lb" {
@@ -25,11 +25,12 @@ resource "azurerm_lb_backend_address_pool" "backend_pool" {
 }
 
 resource "azurerm_lb_nat_rule" "tcp" {
-  resource_group_name            = "azurerm_resource_group.rg.name"
-  loadbalancer_id                = "${azurerm_lb.lb.id}"
-  name                           = "RDP-VM-${count.index}"
-  protocol                       = "tcp"
-  frontend_port                  = "format(%05d, count.index + 50000)"
+  resource_group_name = "azurerm_resource_group.rg.name"
+  loadbalancer_id     = "${azurerm_lb.lb.id}"
+  name                = "RDP-VM-${count.index}"
+  protocol            = "tcp"
+  frontend_port       = "${count.index + 50000}"
+  # frontend_port                  = "format(%03d, count.index + 1)"
   backend_port                   = 3389
   frontend_ip_configuration_name = "LoadBalancerFrontEnd"
   count                          = "${var.number_of_workstations}"

@@ -6,7 +6,7 @@ resource "azurerm_network_interface" "build_host-nic" {
 
   ip_configuration {
     name                          = "ipconfig${count.index}"
-    subnet_id                     = "azurerm_subnet.subnet.id"
+    subnet_id                     = "${azurerm_subnet.subnet.id}"
     private_ip_address_allocation = "Dynamic"
   }
 }
@@ -16,7 +16,7 @@ resource "azurerm_virtual_machine" "build-host" {
   location                         = "${var.location}"
   resource_group_name              = "azurerm_resource_group.rg.name"
   vm_size                          = "${var.vm_size}"
-  network_interface_ids            = "[element(azurerm_network_interface.build_host-nic.*.id, count.index)]"
+  network_interface_ids            = ["${element(azurerm_network_interface.build_host-nic.*.id, count.index, )}"]
   count                            = "${var.number_of_build_hosts}"
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true

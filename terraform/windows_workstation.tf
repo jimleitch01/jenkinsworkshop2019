@@ -5,10 +5,13 @@ resource "azurerm_virtual_machine" "ws" {
 
   availability_set_id              = "${azurerm_availability_set.avset.id}"
   vm_size                          = "var.vm_size"
-  network_interface_ids            = "[element(azurerm_network_interface.windows-workstation-nic.*.id, count.index, )]"
+  network_interface_ids            = ["${element(azurerm_network_interface.windows-workstation-nic.*.id, count.index, )}"]
   count                            = "${var.number_of_workstations}"
   delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
+
+
+
 
   storage_image_reference {
     publisher = "var.image_publisher"
@@ -48,9 +51,11 @@ resource "azurerm_network_interface" "windows-workstation-nic" {
 
   ip_configuration {
     name                          = "ipconfig${count.index}"
-    subnet_id                     = "azurerm_subnet.subnet.id"
+    subnet_id                     = "${azurerm_subnet.subnet.id}"
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = "element(azurerm_public_ip.windows-workstation-nic-ip.*.id,count.index)"
+
+    # public_ip_address_id = ["${element(azurerm_public_ip.windows-workstation-nic-ip.*.id, count.index, )}"]
+
     # load_balancer_backend_address_pools_ids = ["${azurerm_lb_backend_address_pool.backend_pool.id}"]
     # load_balancer_inbound_nat_rules_ids     = ["${element(azurerm_lb_nat_rule.tcp.*.id, count.index)}"]
   }

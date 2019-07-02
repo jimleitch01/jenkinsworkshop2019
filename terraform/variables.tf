@@ -90,7 +90,7 @@ variable "admin_password" {
 
 variable "number_of_workstations" {
   description = "number of Windows workstations to be created"
-  default     = "2"
+  default     = "1"
 }
 
 variable "number_of_jenkins" {
