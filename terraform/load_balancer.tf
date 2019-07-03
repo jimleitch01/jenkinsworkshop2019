@@ -25,37 +25,23 @@ resource "azurerm_lb_backend_address_pool" "backend_pool" {
 }
 
 resource "azurerm_lb_nat_rule" "tcp" {
-  resource_group_name = "${azurerm_resource_group.rg.name}"
-  loadbalancer_id     = "${azurerm_lb.lb.id}"
-  name                = "RDP-VM-${count.index}"
-  protocol            = "tcp"
-  frontend_port       = "${count.index + 50000}"
-  # frontend_port                  = "format(%03d, count.index + 1)"
+  resource_group_name            = "${azurerm_resource_group.rg.name}"
+  loadbalancer_id                = "${azurerm_lb.lb.id}"
+  name                           = "RDP-VM-${count.index}"
+  protocol                       = "tcp"
+  frontend_port                  = "${count.index + 50000}"
   backend_port                   = 3389
   frontend_ip_configuration_name = "LoadBalancerFrontEnd"
   count                          = "${var.number_of_workstations}"
 }
 
-# resource "azurerm_lb_rule" "lb_rule" {
-#   resource_group_name            = "${azurerm_resource_group.rg.name}"
-#   loadbalancer_id                = "${azurerm_lb.lb.id}"
-#   name                           = "LBRule"
-#   protocol                       = "tcp"
-#   frontend_port                  = 80
-#   backend_port                   = 80
-#   frontend_ip_configuration_name = "LoadBalancerFrontEnd"
-#   enable_floating_ip             = false
-#   backend_address_pool_id        = "${azurerm_lb_backend_address_pool.backend_pool.id}"
-#   idle_timeout_in_minutes        = 5
-#   probe_id                       = "${azurerm_lb_probe.lb_probe.id}"
-#   depends_on                     = ["azurerm_lb_probe.lb_probe"]
-# }
-# resource "azurerm_lb_probe" "lb_probe" {
-#   resource_group_name = "${azurerm_resource_group.rg.name}"
-#   loadbalancer_id     = "${azurerm_lb.lb.id}"
-#   name                = "tcpProbe"
-#   protocol            = "tcp"
-#   port                = 80
-#   interval_in_seconds = 5
-#   number_of_probes    = 2
-# }
+resource "azurerm_lb_nat_rule" "tutor" {
+  resource_group_name            = "${azurerm_resource_group.rg.name}"
+  loadbalancer_id                = "${azurerm_lb.lb.id}"
+  name                           = "RDP-TUTOR"
+  protocol                       = "tcp"
+  frontend_port                  = "50100"
+  backend_port                   = "3389"
+  frontend_ip_configuration_name = "LoadBalancerFrontEnd"
+  count                          = "1"
+}

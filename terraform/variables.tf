@@ -55,7 +55,8 @@ variable "storage_replication_type" {
 
 variable "vm_size" {
   description = "Specifies the size of the virtual machine."
-  default     = "Standard_D2s_v3"
+  # default     = "Standard_D2s_v3"
+  default = "Standard_B2ms"
 }
 
 variable "image_publisher" {
@@ -90,8 +91,14 @@ variable "admin_password" {
 
 variable "number_of_workstations" {
   description = "number of Windows workstations to be created"
-  default     = "11"
+  default     = "2"
 }
+
+variable "number_of_tutors" {
+  description = "number of Tutors workstations to be created"
+  default     = "1"
+}
+
 
 variable "number_of_jenkins" {
   description = "number of Jenkins hosts to be created"

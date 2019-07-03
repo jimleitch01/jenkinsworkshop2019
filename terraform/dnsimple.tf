@@ -13,4 +13,35 @@ resource "dnsimple_record" "workstationlb" {
   ttl    = 60
 }
 
-# workstations.test-rig.net	jws2019.jws2019
+resource "dnsimple_record" "jenkins" {
+  domain = "test-rig.net"
+  name   = "jenkins.${var.lb_ip_dns_name}"
+  value  = "${azurerm_network_interface.jenkins-nic.private_ip_address}"
+  type   = "A"
+  ttl    = 60
+}
+
+resource "dnsimple_record" "app" {
+  domain = "test-rig.net"
+  name   = "app.${var.lb_ip_dns_name}"
+  value  = "${azurerm_network_interface.app_host-nic.private_ip_address}"
+  type   = "A"
+  ttl    = 60
+}
+
+resource "dnsimple_record" "build" {
+  domain = "test-rig.net"
+  name   = "build.${var.lb_ip_dns_name}"
+  value  = "${azurerm_network_interface.build_host-nic.private_ip_address}"
+  type   = "A"
+  ttl    = 60
+}
+
+resource "dnsimple_record" "tutor" {
+  domain = "test-rig.net"
+  name   = "tutor.${var.lb_ip_dns_name}"
+  value  = "${azurerm_network_interface.windows-tutor-nic.private_ip_address}"
+  type   = "A"
+  ttl    = 60
+}
+
