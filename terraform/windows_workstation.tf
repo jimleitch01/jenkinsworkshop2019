@@ -54,7 +54,7 @@ resource "azurerm_network_interface" "windows-workstation-nic" {
     # public_ip_address_id = ["${element(azurerm_public_ip.windows-workstation-nic-ip.*.id, count.index, )}"]
 
     # load_balancer_backend_address_pools_ids = ["${azurerm_lb_backend_address_pool.backend_pool.id}"]
-    # load_balancer_inbound_nat_rules_ids     = ["${element(azurerm_lb_nat_rule.tcp.*.id, count.index)}"]
+    # load_balancer_inbound_nat_rules_ids     = ["${element(azurerm_lb_nat_rule.ws.*.id, count.index)}"]
   }
 }
 

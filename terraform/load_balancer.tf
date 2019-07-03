@@ -35,13 +35,13 @@ resource "azurerm_lb_nat_rule" "tcp" {
   count                          = "${var.number_of_workstations}"
 }
 
-resource "azurerm_lb_nat_rule" "tutor" {
-  resource_group_name            = "${azurerm_resource_group.rg.name}"
-  loadbalancer_id                = "${azurerm_lb.lb.id}"
-  name                           = "TUTOR-VM-${count.index}"
-  protocol                       = "tcp"
-  frontend_port                  = "${count.index + 50100}"
-  backend_port                   = 3389
-  frontend_ip_configuration_name = "LoadBalancerFrontEnd"
-  count                          = "${var.number_of_tutors}"
-}
+# resource "azurerm_lb_nat_rule" "tutor" {
+#   resource_group_name            = "${azurerm_resource_group.rg.name}"
+#   loadbalancer_id                = "${azurerm_lb.lb.id}"
+#   name                           = "TUTOR-VM-${count.index}"
+#   protocol                       = "ws"
+#   frontend_port                  = "${count.index + 50100}"
+#   backend_port                   = 3389
+#   frontend_ip_configuration_name = "LoadBalancerFrontEnd"
+#   count                          = "${var.number_of_tutors}"
+# }

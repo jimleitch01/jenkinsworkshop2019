@@ -15,7 +15,7 @@ resource "azurerm_virtual_machine" "jenkins" {
   name                             = "jenkins-${count.index}"
   location                         = "${var.location}"
   resource_group_name              = "${azurerm_resource_group.rg.name}"
-  vm_size                          = "${var.vm_size}"
+  vm_size                          = "Standard_D2s_v3"
   network_interface_ids            = ["${element(azurerm_network_interface.jenkins-nic.*.id, count.index, )}"]
   count                            = "${var.number_of_jenkins}"
   delete_os_disk_on_termination    = true

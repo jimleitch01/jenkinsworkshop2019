@@ -50,19 +50,20 @@ resource "azurerm_network_interface" "windows-tutor-nic" {
     name                          = "ipconfig${count.index}"
     subnet_id                     = "${azurerm_subnet.subnet.id}"
     private_ip_address_allocation = "Dynamic"
+    # public_ip_address_id          = ["${element(azurerm_public_ip.windows-tutor-nic-ip.*.id, count.index, )}"]
+    # public_ip_address_allocation = "Dynamic"
 
-    # public_ip_address_id = ["${element(azurerm_public_ip.windows-tutor-nic-ip.*.id, count.index, )}"]
 
     # load_balancer_backend_address_pools_ids = ["${azurerm_lb_backend_address_pool.backend_pool.id}"]
-    # load_balancer_inbound_nat_rules_ids     = ["${element(azurerm_lb_nat_rule.tcp.*.id, count.index)}"]
+    # load_balancer_inbound_nat_rules_ids     = ["${element(azurerm_lb_nat_rule.ws.*.id, count.index)}"]
   }
 }
 
-resource "azurerm_network_interface_nat_rule_association" "windows-tutor-nic" {
-  # network_interface_id  = "${azurerm_network_interface.windows-tutor-nic.id}"
-  network_interface_id = "${element(azurerm_network_interface.windows-tutor-nic.*.id, count.index)}"
-  # network_interface_id  = "${azurerm_network_interface.test.id}"
-  ip_configuration_name = "ipconfig${count.index}"
-  nat_rule_id           = "${element(azurerm_lb_nat_rule.tcp.*.id, count.index + 100)}"
-  count                 = "${var.number_of_tutors}"
-}
+# resource "azurerm_network_interface_nat_rule_association" "windows-tutor-nic" {
+#   # network_interface_id  = "${azurerm_network_interface.windows-tutor-nic.id}"
+#   network_interface_id = "${element(azurerm_network_interface.windows-tutor-nic.*.id, count.index)}"
+#   # network_interface_id  = "${azurerm_network_interface.test.id}"
+#   ip_configuration_name = "ipconfig${count.index}"
+#   nat_rule_id           = "${element(azurerm_lb_nat_rule.tutor.*.id, count.index)}"
+#   count                 = "${var.number_of_tutors}"
+# }

@@ -37,11 +37,11 @@ resource "dnsimple_record" "build" {
   ttl    = 60
 }
 
-resource "dnsimple_record" "tutor" {
-  domain = "test-rig.net"
-  name   = "tutor.${var.lb_ip_dns_name}"
-  value  = "${azurerm_network_interface.windows-tutor-nic.private_ip_address}"
-  type   = "A"
-  ttl    = 60
-}
+#resource "dnsimple_record" "tutor" {
+#  domain = "test-rig.net"
+#  name   = "tutor.${var.lb_ip_dns_name}"
+#  value  = "${azurerm_network_interface.windows-tutor-nic.private_ip_address}"
+#  type   = "A"
+#  ttl    = 60
+#}
 

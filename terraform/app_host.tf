@@ -15,7 +15,7 @@ resource "azurerm_virtual_machine" "app-host" {
   name                             = "app-host-${count.index}"
   location                         = "${var.location}"
   resource_group_name              = "${azurerm_resource_group.rg.name}"
-  vm_size                          = "${var.vm_size}"
+  vm_size                          = "Standard_D2s_v3"
   network_interface_ids            = ["${element(azurerm_network_interface.app_host-nic.*.id, count.index, )}"]
   count                            = "${var.number_of_app_hosts}"
   delete_os_disk_on_termination    = true
