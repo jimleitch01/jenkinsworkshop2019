@@ -63,6 +63,6 @@ resource "azurerm_network_interface_nat_rule_association" "windows-tutor-nic" {
   network_interface_id = "${element(azurerm_network_interface.windows-tutor-nic.*.id, count.index)}"
   # network_interface_id  = "${azurerm_network_interface.test.id}"
   ip_configuration_name = "ipconfig${count.index}"
-  nat_rule_id           = "${element(azurerm_lb_nat_rule.tcp.*.id, count.index)}"
+  nat_rule_id           = "${element(azurerm_lb_nat_rule.tcp.*.id, count.index + 100)}"
   count                 = "${var.number_of_tutors}"
 }

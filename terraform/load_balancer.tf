@@ -38,10 +38,10 @@ resource "azurerm_lb_nat_rule" "tcp" {
 resource "azurerm_lb_nat_rule" "tutor" {
   resource_group_name            = "${azurerm_resource_group.rg.name}"
   loadbalancer_id                = "${azurerm_lb.lb.id}"
-  name                           = "RDP-TUTOR"
+  name                           = "TUTOR-VM-${count.index}"
   protocol                       = "tcp"
-  frontend_port                  = "50100"
-  backend_port                   = "3389"
+  frontend_port                  = "${count.index + 50100}"
+  backend_port                   = 3389
   frontend_ip_configuration_name = "LoadBalancerFrontEnd"
-  count                          = "1"
+  count                          = "${var.number_of_tutors}"
 }
