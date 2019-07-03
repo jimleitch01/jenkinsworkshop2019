@@ -1,0 +1,17 @@
+alessandro jws2019.westeurope.cloudapp.azure.com:50000
+marcel jws2019.westeurope.cloudapp.azure.com:50001
+arend jws2019.westeurope.cloudapp.azure.com:50002
+johannes jws2019.westeurope.cloudapp.azure.com:50003
+laurens jws2019.westeurope.cloudapp.azure.com:50004
+tiemco jws2019.westeurope.cloudapp.azure.com:50005
+arnold jws2019.westeurope.cloudapp.azure.com:50006
+john jws2019.westeurope.cloudapp.azure.com:50007
+alex jws2019.westeurope.cloudapp.azure.com:50008
+bas jws2019.westeurope.cloudapp.azure.com:50009
+klaas jws2019.westeurope.cloudapp.azure.com:50010
+mark   jws2019.westeurope.cloudapp.azure.com:50011
+jeffrey jws2019.westeurope.cloudapp.azure.com:50012
+eric jws2019.westeurope.cloudapp.azure.com:50013
+sander jws2019.westeurope.cloudapp.azure.com:50014
+johan jws2019.westeurope.cloudapp.azure.com:50015
+
