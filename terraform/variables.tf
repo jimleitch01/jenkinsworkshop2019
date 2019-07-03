@@ -91,12 +91,12 @@ variable "admin_password" {
 
 variable "number_of_workstations" {
   description = "number of Windows workstations to be created"
-  default     = "18"
+  default     = "1"
 }
 
 variable "number_of_tutors" {
   description = "number of Tutors workstations to be created"
-  default     = "1"
+  default     = "2"
 }
 
 
@@ -107,12 +107,12 @@ variable "number_of_jenkins" {
 
 variable "number_of_build_hosts" {
   description = "number of builder hosts to be created"
-  default     = "1"
+  default     = "0"
 }
 
 variable "number_of_app_hosts" {
   description = "number of apphosts to be created"
-  default     = "1"
+  default     = "0"
 }
 
 variable "dnsimple_account" {

@@ -19,6 +19,7 @@ resource "dnsimple_record" "jenkins" {
   value  = "${azurerm_network_interface.jenkins-nic.private_ip_address}"
   type   = "A"
   ttl    = 60
+  count  = "${var.number_of_jenkins}"
 }
 
 resource "dnsimple_record" "app" {
@@ -27,6 +28,7 @@ resource "dnsimple_record" "app" {
   value  = "${azurerm_network_interface.app_host-nic.private_ip_address}"
   type   = "A"
   ttl    = 60
+  count  = "${var.number_of_app_hosts}"
 }
 
 resource "dnsimple_record" "build" {
@@ -35,6 +37,7 @@ resource "dnsimple_record" "build" {
   value  = "${azurerm_network_interface.build_host-nic.private_ip_address}"
   type   = "A"
   ttl    = 60
+  count  = "${var.number_of_build_hosts}"
 }
 
 #resource "dnsimple_record" "tutor" {
