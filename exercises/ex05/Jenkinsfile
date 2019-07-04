@@ -4,7 +4,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Stage One') {
+        stage('Maandag') {
             steps {
                 sh '''
                     echo Stage One
@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Stage Two') {
+        stage('Dinsdag') {
             steps {
                 sh '''
                     echo Stage Two, Sander
@@ -20,7 +20,23 @@ pipeline {
             }
         }
 
-        stage('Stage Bijna weekend') {
+        stage('Woensdag, de week is doormidden') {
+            steps {
+                sh '''
+                    echo Stage Two, Sander
+                '''
+            }
+        }
+
+        stage('Donderdag, bijna weekend') {
+            steps {
+                sh '''
+                    echo Stage Two, Sander
+                '''
+            }
+        }
+
+        stage('Vrijdag, echt bijna weekend') {
             steps {
                 sh '''
                     echo Stage Two, Sander
