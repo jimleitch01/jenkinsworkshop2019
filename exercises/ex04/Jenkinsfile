@@ -10,6 +10,13 @@ pipeline {
                 sh 'echo My Branch Number is: ${BRANCH_NAME}'
             }
         }
+        stage('Stap 2') {
+            steps {
+                sh 'echo My Build Number is: ${BUILD_NUMBER}'
+                sh 'echo My Branch ID is: ${BUILD_ID}'
+                sh 'echo My Build Display Number is: ${BUILD_DISPLAY_NAME}'
+            }
+        }
 
   
 
