@@ -78,13 +78,3 @@ pipeline {
       }
     }
   }
-
-  post {
-    failure {
-      // notify users when the Pipeline fails
-      mail to: 'jeffrey.van.etten@Pondres.nl',
-          subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-          body: "Something is wrong with ${env.BUILD_URL}"
-    }
-  }
-}
