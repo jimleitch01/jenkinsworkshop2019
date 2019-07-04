@@ -20,6 +20,30 @@ pipeline {
             }
         }
 
+        stage('Stage Three') {
+            steps {
+                sh '''
+                    echo Stage Three
+                '''
+            }
+        }
+
+        stage('Stage Four') {
+            steps {
+                sh '''
+                    echo Stage Four
+                '''
+            }
+        }
+
+        stage('Stage Five') {
+            steps {
+                sh '''
+                    echo Stage Five
+                '''
+            }
+        }
+
 
         }
     }
