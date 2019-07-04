@@ -25,7 +25,7 @@ pipeline {
   }
 }
 
-    stage('run-parallel-branches') {
+    stage('run-parallel-branches-2') {
   steps {
     parallel(
       1: {
