@@ -9,10 +9,5 @@ pipeline {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}, BRANCH NAME is: ${BRANCH_NAME}, JOB NAME is: ${JOB_NAME}'
             }
         }  
-        stage('Stage Two') {
-            steps {
-                sh '2 Bijna weekend...'
-            }
-        }
         }
     }
