@@ -7,7 +7,7 @@ pipeline {
         stage('Stage Ontwikkel') {
             steps {
                 sh '''
-                    echo Stage One
+                    echo Stage Ontwikkel
                 '''
             }
         }
@@ -15,21 +15,21 @@ pipeline {
         stage('Stage Test') {
             steps {
                 sh '''
-                    echo Stage Two
+                    echo Stage Test
                 '''
             }
         }
         stage('Stage Acceptance') {
             steps {
                 sh '''
-                    echo Stage Two
+                    echo Stage Acceptance
                 '''
             }
         }
             stage('Stage Production') {
             steps {
                 sh '''
-                    echo Stage Two
+                    echo Stage Production
                 '''
             }
         }
