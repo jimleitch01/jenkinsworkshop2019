@@ -8,15 +8,11 @@ pipeline {
             steps {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}, BRANCH NAME is: ${BRANCH_NAME}, JOB NAME is: ${JOB_NAME}'
             }
-        },
+        }  
         stage('Stage Two') {
             steps {
-                sh 'step 2. echo My Build Number is: ${BUILD_NUMBER}, BRANCH NAME is: ${BRANCH_NAME}, JOB NAME is: ${JOB_NAME}'
+                sh '2 Bijna weekend. :)'
             }
         }
-
-
-  
-
         }
     }
