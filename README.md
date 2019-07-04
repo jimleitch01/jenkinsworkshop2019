@@ -130,14 +130,20 @@ http://jenkins.jws2019.test-rig.net:8080/
 
 https://github.com/microsoft/Git-Credential-Manager-for-Windows/releases/download/1.18.5/GCMW-1.18.5.exe
 
-``
+
 
 Start `ConEmu` with Git Bash option
 
-git clone https://github.com/jimleitch01/jenkinsworkshop2019
 
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
+
+
+```bash
+git clone https://github.com/jimleitch01/jenkinsworkshop2019
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git checkout -b YourName
+```
+
 
 Make a small change and and `push` results :
 
@@ -153,7 +159,7 @@ Make a small change and and `push` results :
 
 - [ ] Connect to Cloud Workstation using RDP client, use details in table above
 
-# 
+
 
 
 
@@ -275,7 +281,8 @@ https://jenkins.io/projects/jenkins-x/
 
 ### Exercise 02 - Traditional Jenkins Build *(FreeStyle)*
 
-- [ ] Create a Branch in GIT with **_YOURNAME_**
+
+
 - [ ] Create a Folder in Jenkins with **_YOURNAME_** 
 
 - [ ] Create New FreeStyle job in your folder
@@ -312,29 +319,29 @@ mvn install
 
 
 
-### Exercise 03 - My first Pipeline
+### Exercise 02 - My first Pipeline
 
 Create 
 
 Show Workflow and run thru a few times
 
-### Exercise 04 Autocreate Job from Branch
+### Exercise 03 Autocreate Job from Branch
 
-### Exercise 04 - Shell & Variables
+### Exercise 04  Shell & Variables
 
-### Exercise 05 - Blocks
+### Exercise 05  Blocks
 
-### Exercise 06 - Parallel Running
+### Exercise 06  Parallel Running
 
-### Exercise 07 - Using Plugins & Snippet Editor
+### Exercise 07 Using Plugins & Snippet Editor
 
-### Exercise 08 - Blue Ocean & Editor
+### Exercise 08 Blue Ocean & Editor
 
-### Exercise 10 - Docker multistage build
+### Exercise 09 - Docker multistage build
 
-### Exercise 08 -Azure Container Build
+### Exercise 10 Azure Container Build
 
-###Exercise 11 - Easiest Jenkins Install In The World:
+###Exercise 11 Easiest Jenkins Install In The World
 
 `sudo apt-get install default-jdk`
 
@@ -343,18 +350,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubunt
 #### Jenkins PlugIns
 
 - Azure Service Principal
-
-
-
-
-
-# Conor ToDo:
-
-
-
-- [ ] Create Branch per person
-- [ ] Install software on workstations
-- [ ] Create Personal folders in Jenkins
 
 
 
