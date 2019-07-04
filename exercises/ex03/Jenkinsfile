@@ -15,7 +15,9 @@ pipeline {
     // stages {
     //         stage('Build Stage') {
     //             steps {
-    //                 shell '''
+    //                 sh '''
+                           set -x
+                           set -e
     //                     mvn test
     //                     mvn install
     //                 '''
