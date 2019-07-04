@@ -17,9 +17,40 @@
 
 
 
+# Introduction
+
+
+
+#### Who am I ?
+
+- Jim Leitch
+
+#### Who Is He ?
+
+- Conor Wyse
+
+####Who is Amazic ?
+
+####Who is CloudBees ?
+
+#### What are Objectives ?
+
+Spring PetClinic Build
+
+- Get Started and Connected To Cloud Workstation
+- Quick Recap of CICD Principles
+- History of Jenkins Pipeline
+- Build on Workstation
+- Build on Jenkins (Tradtional - FreeStyle Job)
+- Declarative Pipelines !
+
+
+
 # Getting Started
 
 #### RDP Workstation
+
+- [ ] Instal MS RDP client on your laptop !
 
 **Username:** `workshop`
 
@@ -48,7 +79,7 @@
 
 #### Installing Required Client SW
 
-Copy and paste this into PowerShell
+~~Copy and paste this into PowerShell~~ Has been done already
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -65,14 +96,34 @@ choco install -y ConEmu
 
 
 
-Install GIT credentials manager
+- Check all components working
+
+
+
+#### Jenkins Server
+
+http://jenkins.jws2019.test-rig.net:8080/
+
+`ssh workshop@jenkins.jws2019.test-rig.net`
+
+**Username:** `workshop`
+
+**Password:** `00AB@-equation-blue-major`
+
+
+
+#### GIT Prep
+
+##### Install GIT credentials manager
 
 https://github.com/microsoft/Git-Credential-Manager-for-Windows/releases/download/1.18.5/GCMW-1.18.5.exe
+
+Start `ConEmu` with Git Bash option
 
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
 
-Small change and `push` results in:
+Make a small change and and `push` results :
 
 
 
@@ -86,29 +137,11 @@ Small change and `push` results in:
 
 
 
-#### Jenkins Server
-
-http://jenkins.jws2019.test-rig.net:8080/
-
-**Username:** `workshop`
-
-**Password:** `00AB@-equation-blue-major`
-
-`ssh workshop@jenkins.jws2019.test-rig.net`
 
 
 
 
 
-git clone https://github.com/jimleitch01/jenkinsworkshop2019.git
-
-Prep
-
-Get connected to cloud workstation
-
-Pull repo
-
-Goals
 
 
 
@@ -138,19 +171,7 @@ Jenkins Declarative pipeline exercises
 
 
 
-# Introduction 
 
-
-
-Who am I
-
-Who is Amazic
-
-Who is CloudBees
-
-What are objectives
-
-History of Jenkins Pipeline
 
 
 
@@ -235,21 +256,13 @@ Jenkins X
 
 
 
-#### Workstation Tools
-
-- Chocolatey - Package manager
-- jdk8 - java
-- maven - java build tool
-- git - scm, git client
-- firefox - browser
-- vscode - IDE
-- googlechrome browser
-- putty - ssh client
-- ConEmu - niceer windows console
+- 
 
 
 
+#### Jenkins PlugIns
 
+- Azure Service Principal
 
 
 
