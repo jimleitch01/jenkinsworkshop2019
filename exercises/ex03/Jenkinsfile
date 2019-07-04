@@ -1,14 +1,28 @@
-pipeline {
-    agent any
+// pipeline {
+//     agent any
 
+//     stages {
+//         stage('Build Stage') {
+//             steps {
+//                 sh 'echo Not Really Building'
+//             }
+//         }
+//         }
+//     }
+
+
+
+pipeline {
+    agent any 
     stages {
-        stage('Build Stage') {
+        stage('Example Build') {
             steps {
-                sh 'echo Not Really Building'
+                sh 'mvn -B clean verify'
             }
         }
-        }
     }
+}
+
 
 
 
