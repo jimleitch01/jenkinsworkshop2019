@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     echo Stage Two
-                    echo SUBMITTER was ${SUBMITTERNAME}
+                    
                 '''
             }
         }
