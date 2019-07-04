@@ -25,6 +25,18 @@ pipeline {
   }
 }
 
+stage('Quality Analysis') {
+      parallel {
+        // run Sonar Scan and Integration tests in parallel. This syntax requires Declarative Pipeline 1.2 or higher
+        stage ('Integration Test') {
+          agent any  //run this stage on any available agent
+          steps {
+            echo 'Run integration tests here...'
+          }
+        }
+      
+      }
+    }
 
         }
     }
