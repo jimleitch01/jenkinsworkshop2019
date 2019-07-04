@@ -2,6 +2,8 @@
 
 #### 4th July 2019
 
+EDITED JEFFREY
+
 > In this free hands-on workshop you will learn how to create and run a Jenkins Declarative Pipeline using the Blue Ocean Editor. Participants will create a real-life Pipeline to build, test and deploy a Pipeline. The class ends with a quick tour of Pipeline capabilities that provide fit and finish to your Pipeline.
 >
 > Duration
