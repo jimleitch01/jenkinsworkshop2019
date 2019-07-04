@@ -4,7 +4,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Stage One') {
+        stage('Stage Ontwikkel') {
             steps {
                 sh '''
                     echo Stage One
@@ -12,14 +12,26 @@ pipeline {
             }
         }
 
-        stage('Stage Two') {
+        stage('Stage Test') {
             steps {
                 sh '''
                     echo Stage Two
                 '''
             }
         }
-
-
+        stage('Stage Acceptance') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
+            stage('Stage Production') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
         }
     }
