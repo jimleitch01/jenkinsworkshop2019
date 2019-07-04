@@ -10,6 +10,7 @@
 > Agenda
 > 12:00 – 13:00: Lunch and registration
 > 13:00 – 17:00: Jenkins Pipeline Workshop
+> 17:00 Go home
 >
 > Facilities
 > Bring your own laptop
