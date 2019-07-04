@@ -1,0 +1,68 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Init') {
+            steps {
+                echo 'Building..'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+
+// SCRIPTED PIPELINE ALTERNATIVE
+
+// node {
+//     stage('Build') {
+//         echo 'Building....'
+//     }
+//     stage('Test') {
+//         echo 'Testing....'
+//     }
+//     stage('Deploy') {
+//         echo 'Deploying....'
+//     }
+// }
+
+
+
+
+node {
+    stage('Init Stage'){
+        env.APP_NAME = "spr-monolith"
+        env.ACR_NAME = "testrigregistry"
+        env.SUBSCRIPTION_ID = "57b13db8-88cf-4fe6-924b-ae10dc6fadee"
+        env.AKS_NAME = "demo-aks"
+        env.RESOURCE_GROUP = "demo-rg"
+            
+    }
+
+    stage('GitCheckout'){
+        checkout scm
+    }
+
+    
+
+    stage('AzureBuild'){
+    withCredentials([azureServicePrincipal('test-rig-demo-jenkins')]) {
+        sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
+        sh 'az acr build --file Dockerfile --subscription  ${SUBSCRIPTION_ID}   --registry ${ACR_NAME} --image ${APP_NAME}:${BRANCH_NAME} .'
+    }}
+
