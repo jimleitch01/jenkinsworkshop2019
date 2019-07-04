@@ -9,7 +9,12 @@ pipeline {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}'
             }
         }
-
+        stage('Step TWO'){
+            steps{
+                sh 'echo The branch is ${BRANCH_NAME}'
+                sh 'echo The last commit was ${GIT_COMMIT}'
+            }
+        }
   
 
         }
