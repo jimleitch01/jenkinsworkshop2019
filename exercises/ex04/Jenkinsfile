@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Stage Two') {
             steps {
-                sh 'echo My Build Number is: ${BUILD_NUMBER}'
+Jenkins.instance.getNode('Node-Name').getComputer().setAcceptingTasks(true)
             }
         }
 
