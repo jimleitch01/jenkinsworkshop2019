@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Stage') {
             steps {
-                echo 'Fake Building..'
+                sh `echo Fake Building..`
             }
         }
         }
