@@ -22,6 +22,8 @@ pipeline {
         echo "This is branch b"
       }
     )
+}
+}
 
 
 
