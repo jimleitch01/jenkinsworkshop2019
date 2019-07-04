@@ -1,4 +1,4 @@
-// EX06
+// EX06 Parallel Running
 
 pipeline {
     agent any

@@ -1,4 +1,4 @@
-// EX08
+// EX08 Blue Ocean & Editor
 
 pipeline {
     agent any

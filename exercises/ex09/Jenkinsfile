@@ -1,4 +1,4 @@
-// EX09
+// EX09 Docker multistage build
 
 pipeline {
     agent any

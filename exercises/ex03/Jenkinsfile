@@ -1,4 +1,4 @@
-// EX03
+// EX03 Autocreate Job from Branch
 
 pipeline {
     agent any
@@ -6,19 +6,11 @@ pipeline {
     stages {
         stage('Stage One') {
             steps {
-                sh '''
-                    echo Stage One
-                '''
+                echo 'Hello, Jenkins'
             }
         }
 
-        stage('Stage Two') {
-            steps {
-                sh '''
-                    echo Stage Two
-                '''
-            }
-        }
+ 
 
 
         }

@@ -1,4 +1,4 @@
-// EX04
+// EX04 Shell & Variables
 
 pipeline {
     agent any
@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Stage One') {
             steps {
-                sh '''
-                    echo Stage One
+                sh 'echo My Build Number is: ${BUILD_NUMBER}'
+                    
                 '''
             }
         }
