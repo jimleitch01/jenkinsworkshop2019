@@ -11,7 +11,8 @@ pipeline {
         }
         stage('Stage Two') {
             steps {
-USER=`echo ${BUILD_USER_ID} | sed 's/.*(\(.*\))/\1/'`
+                sh 'echo My Build Number is: ${BUILD_NUMBER}'
+
             }
         }
 
