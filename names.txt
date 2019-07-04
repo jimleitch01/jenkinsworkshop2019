@@ -2,7 +2,7 @@ alessandro jws2019.westeurope.cloudapp.azure.com:50000
 marcel jws2019.westeurope.cloudapp.azure.com:50001
 arend jws2019.westeurope.cloudapp.azure.com:50002
 johannes jws2019.westeurope.cloudapp.azure.com:50003
-laurens jws2019.westeurope.cloudapp.azure.com:50004
+Laurens jws2019.westeurope.cloudapp.azure.com:50004
 tiemco jws2019.westeurope.cloudapp.azure.com:50005
 arnold jws2019.westeurope.cloudapp.azure.com:50006
 john jws2019.westeurope.cloudapp.azure.com:50007
