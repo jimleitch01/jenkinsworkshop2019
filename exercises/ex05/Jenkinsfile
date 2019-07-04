@@ -20,6 +20,20 @@ pipeline {
             }
         }
 
+stage('Stage drie') {
+            steps {
+                sh '''
+                    echo Stage 3
+                '''
+            }
+        }
 
+stage('Stage custom') {
+            steps {
+                sh '''
+                    echo Stage custom, extra dus...
+                '''
+            }
+        }
         }
     }
