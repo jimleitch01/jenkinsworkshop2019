@@ -27,7 +27,14 @@ pipeline {
     )
   }
 }
-
+        stage('Stage Three') {
+            steps {
+                sh '''
+                    echo Stage Three
+                '''
+                sh "date -Ins"
+            }
+        }
 
         }
     }
