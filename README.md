@@ -145,8 +145,17 @@ cd jenkinsworkshop2019
 git checkout -b YourName
 ```
 
-
 Make a small change and and `push` results :
+
+
+
+```bash
+git add . --all
+git commit -am "comment"
+git push
+```
+
+
 
 
 
@@ -341,6 +350,8 @@ http://jenkins.jws2019.test-rig.net:8080/env-vars.html/
 ### Exercise 08 Blue Ocean & Editor
 
 ### Exercise 09 - Docker multistage build
+
+- Don't need agents or to install laods of stuff
 
 ### Exercise 10 Azure Container Build
 
