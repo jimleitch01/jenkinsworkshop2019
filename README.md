@@ -94,11 +94,7 @@ http://jenkins.jws2019.test-rig.net:8080/
 
 **Password:** `00AB@-equation-blue-major`
 
-
-
-
-
-
+`ssh workshop@jenkins.jws2019.test-rig.net`
 
 
 
@@ -281,7 +277,28 @@ Create New FreeStyle job in your folder
 
 Connect to git repo
 
+Set Parameter `PETCLINICPORT`
 
+Build Stage
+
+```#!/bin/bash 
+#!/bin/bash
+
+set -e
+set -x
+
+if [[ ${PETCLINICPORT} == "" ]]
+then
+	export petClinicPort=9090
+fi
+
+
+mvn test
+
+mvn install
+
+# java -Dserver.port=${PETCLINICPORT} -jar target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar 
+```
 
 ### Exercise 03 - My first Pipeline
 
