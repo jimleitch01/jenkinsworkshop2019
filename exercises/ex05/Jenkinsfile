@@ -24,6 +24,7 @@ pipeline {
             steps {
                 sh '''
                     echo far far away
+                    echo Today is Thursday.
                 '''
             }
         }
