@@ -19,6 +19,20 @@ pipeline {
                 '''
             }
         }
+        stage('Stage Three') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
+        stage('Stage Ninety Nine') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
 
 
         }
