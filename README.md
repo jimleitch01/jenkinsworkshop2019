@@ -1,4 +1,4 @@
-#  Amazic Jenkins Pipeline Workshop
+#  .Amazic Jenkins Pipeline Workshop
 
 #### 4th July 2019
 
