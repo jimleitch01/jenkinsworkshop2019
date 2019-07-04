@@ -4,10 +4,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Deploy approval') {
+        stage('Stage One') {
             steps {
                 sh '''
-		input "Deploy to prod?"
+                    echo Stage One
                 '''
             }
         }
