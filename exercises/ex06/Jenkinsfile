@@ -25,6 +25,28 @@ pipeline {
   }
 }
 
+    stages {
+        stage('Stage Two') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
+
+    stage('run-parallel-branches') {
+  steps {
+    parallel(
+      a: {
+        echo "This is branch c"
+      },
+      b: {
+        echo "This is branch d"
+      }
+    )
+  }
+}
+
 
         }
     }
