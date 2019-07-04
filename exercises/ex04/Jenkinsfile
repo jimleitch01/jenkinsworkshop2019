@@ -10,8 +10,5 @@ pipeline {
                 sh 'echo branch: ${BRANCH_NUMBER}' 
             }
         }
-
-  
-
         }
     }
