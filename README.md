@@ -146,7 +146,7 @@ git checkout -b YourName
 ```
 
 
-Make a small change and and `push` results :
+Make a small change and and `push` results : changed
 
 
 
