@@ -9,6 +9,12 @@ pipeline {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}'
             }
         }
+        stage('Stage Two') {
+            steps {
+                sh 'echo My Time Stamp is: ${BUILD_TIMESTAMP}'
+            }
+        }
+
 
   
 
