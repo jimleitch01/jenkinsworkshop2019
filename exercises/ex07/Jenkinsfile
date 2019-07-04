@@ -12,10 +12,18 @@ pipeline {
             }
         }
 
+        stage('Input Stage') {
+            steps {
+                input message: 'May I go further', ok: 'FURTHER', submitterParameter: 'SUBMITTERNAME'
+            
+            }
+        }
+
         stage('Stage Two') {
             steps {
                 sh '''
                     echo Stage Two
+                    echo SUBMITTER was ${SUBMITTERNAME}
                 '''
             }
         }
