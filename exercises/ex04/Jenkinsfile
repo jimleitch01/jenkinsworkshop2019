@@ -7,6 +7,7 @@ pipeline {
         stage('Stage One') {
             steps {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}... ok! bijna weekend!'
+                sh 'bijna vakantie!'
             }
         }
 
