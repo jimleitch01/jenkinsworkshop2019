@@ -22,8 +22,7 @@ pipeline {
         echo "This is branch b"
       }
     )
-  }
-}
+
 
     stages {
         stage('Stage Two') {
@@ -44,8 +43,7 @@ pipeline {
         echo "This is branch d"
       }
     )
-  }
-}
+
 
 
         }
