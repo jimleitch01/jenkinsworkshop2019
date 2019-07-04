@@ -9,7 +9,7 @@ pipeline {
                 sh '''
                     echo Stage One
                 '''
-                sh "date -u"
+                sh "date -Ins"
             }
         }
 
@@ -18,9 +18,11 @@ pipeline {
     parallel(
       a: {
         echo "This is branch a"
+        sh "date -Ins"
       },
       b: {
         echo "This is branch b"
+        sh "date -Ins"
       }
     )
   }
