@@ -7,7 +7,7 @@ pipeline {
         stage('Maandag') {
             steps {
                 sh '''
-                    echo Stage One
+                    echo pfff
                 '''
             }
         }
@@ -15,7 +15,7 @@ pipeline {
         stage('Dinsdag') {
             steps {
                 sh '''
-                    echo Stage Two, Sander
+                    echo Pff
                 '''
             }
         }
@@ -23,7 +23,7 @@ pipeline {
         stage('Woensdag, de week is doormidden') {
             steps {
                 sh '''
-                    echo Stage Two, Sander
+                    echo hehe
                 '''
             }
         }
@@ -31,7 +31,7 @@ pipeline {
         stage('Donderdag, bijna weekend') {
             steps {
                 sh '''
-                    echo Stage Two, Sander
+                    echo Nog even vol houden
                 '''
             }
         }
@@ -39,7 +39,7 @@ pipeline {
         stage('Vrijdag, echt bijna weekend') {
             steps {
                 sh '''
-                    echo Stage Two, Sander
+                    echo Npg een paar uurtjes
                 '''
             }
         }
