@@ -7,6 +7,7 @@ pipeline {
         stage('Stage One') {
             steps {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}'
+		sh 'echo My BuildTag is: ${BUILD_TAG} '
             }
         }
 
