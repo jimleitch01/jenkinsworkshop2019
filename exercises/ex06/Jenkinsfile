@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-    stage('run-parallel-branches') {
+    stage('run-parallel-test') {
   steps {
     parallel(
       mac: {
