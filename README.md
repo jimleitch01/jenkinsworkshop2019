@@ -13,7 +13,7 @@
 >
 > Facilities
 > Bring your own laptop
-> Lunch included
+> Lunch included (yummy!)
 
 
 
