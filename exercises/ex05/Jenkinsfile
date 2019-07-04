@@ -12,20 +12,22 @@ pipeline {
             }
         }
 
-        parallel {
-            stage('Stage Two') {
-                steps {
-                    sh '''
-                        echo in a galaxy
-                    '''
+        stage('Parallel lines') {
+            parallel {
+                stage('Stage Two') {
+                    steps {
+                        sh '''
+                            echo in a galaxy
+                        '''
+                    }
                 }
-            }
 
-            stage('Stage Two.five') {
-                steps {
-                    sh '''
-                        echo in a land
-                    '''
+                stage('Stage Two.five') {
+                    steps {
+                        sh '''
+                            echo in a land
+                        '''
+                    }
                 }
             }
         }
