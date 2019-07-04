@@ -14,4 +14,5 @@ jeffrey jws2019.westeurope.cloudapp.azure.com:50012
 eric jws2019.westeurope.cloudapp.azure.com:50013
 sander jws2019.westeurope.cloudapp.azure.com:50014
 johan jws2019.westeurope.cloudapp.azure.com:50015
+small change om te testen
 
