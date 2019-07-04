@@ -13,6 +13,7 @@ pipeline {
         stage('Stage Two') {
             steps {
                 sh 'echo My Build is based on : ${GIT_COMMIT}'
+                sh 'env'
             }
         }
   
