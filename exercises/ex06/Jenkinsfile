@@ -20,6 +20,16 @@ pipeline {
       },
       b: {
         echo "This is branch b"
+      },
+      c: {
+        echo "This is branch b"
+      },
+      d: {
+        echo "This is branch b"
+      },
+      e: {
+        echo "This is branch b"
+        sleep(10)
       }
     )
   }
