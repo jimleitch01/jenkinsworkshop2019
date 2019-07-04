@@ -141,6 +141,7 @@ Start `ConEmu` with Git Bash option
 git clone https://github.com/jimleitch01/jenkinsworkshop2019
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
+cd jenkinsworkshop2019
 git checkout -b YourName
 ```
 
