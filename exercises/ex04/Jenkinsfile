@@ -10,7 +10,11 @@ pipeline {
             }
         }
 
-  
+          stage('Stage Two') {
+            steps {
+                sh 'echo My Branche Name is: ${BRANCH_NAME}'
+            }
+        }
 
         }
     }
