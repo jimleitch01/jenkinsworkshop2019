@@ -11,8 +11,7 @@ pipeline {
         }
         stage('Stage Two') {
             steps {
-                sh 'echo My Time Stamp is: ${BUILD_TIMESTAMP}'
-			sh ' echo Build: ${BUILD_NUMBER} at ${BUILD_TIMESTAMP}'
+                sh 'echo ${BUILD_USER_FIRST_NAME}'
 
 
 
