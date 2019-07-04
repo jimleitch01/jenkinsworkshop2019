@@ -13,6 +13,7 @@ pipeline {
             steps{
                 sh 'echo The branch is ${BRANCH_NAME}'
                 sh 'echo The last commit was ${GIT_COMMIT}'
+                sh 'export ${GIT_BRANCH}'
             }
         }
   
