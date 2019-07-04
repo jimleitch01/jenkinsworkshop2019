@@ -11,7 +11,7 @@ pipeline {
         }  
         stage('Stage Two') {
             steps {
-                sh '2 Bijna weekend. :'
+                sh '2 Bijna weekend...'
             }
         }
         }
