@@ -311,6 +311,8 @@ mvn install
 
 Create 
 
+Show Workflow and run thru a few tims
+
 ### Exercise 04 Autocreate Job from Branch
 
 ### Exercise 04 - Shell & Variables
@@ -319,11 +321,9 @@ Create
 
 ### Exercise 06 - Parallel Running
 
-### Exercise 07 - Using Plugins
+### Exercise 07 - Using Plugins & Snipet Editr
 
 ### Exercise 08 - Blue Ocean & Editor
-
-
 
 ### Exercise 10 - Docker multistage build
 
