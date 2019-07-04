@@ -11,12 +11,9 @@ pipeline {
         }
         stage('Stage Two') {
             steps {
-                sh 'echo ${BUILD_USER}'
+                sh 'echo My Build Number is: ${BUILD_NUMBER}'
             }
         }
-
-
-  
 
         }
     }
