@@ -9,10 +9,6 @@ pipeline {
                 echo 'Hello, Jenkins'
             }
         }
-
- 
-
-
         }
     }
 
