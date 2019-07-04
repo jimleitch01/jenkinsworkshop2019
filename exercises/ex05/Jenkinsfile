@@ -39,7 +39,15 @@ pipeline {
         stage('Vrijdag, echt bijna weekend') {
             steps {
                 sh '''
-                    echo Npg een paar uurtjes
+                    echo Nog een paar uurtjes
+                '''
+            }
+        }
+
+        stage('Weekend!!') {
+            steps {
+                sh '''
+                    echo Eindelijk
                 '''
             }
         }
