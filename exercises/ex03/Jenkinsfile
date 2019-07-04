@@ -1,28 +1,28 @@
 pipeline {
     agent any
 
-    // stages {
-    //     stage('Build Stage') {
-    //         steps {
-    //             echo 'Fake Building..'
-    //         }
-    //     }
-    //     }
-    // }
-
-
-
     stages {
-            stage('Build Stage') {
-                steps {
-                    shell '''
-                        mvn test
-                        mvn install
-                    '''
-                }
-            }
+        stage('Build Stage') {
+            steps {
+                echo 'Fake Building..'
             }
         }
+        }
+    }
+
+
+
+    // stages {
+    //         stage('Build Stage') {
+    //             steps {
+    //                 shell '''
+    //                     mvn test
+    //                     mvn install
+    //                 '''
+    //             }
+    //         }
+    //         }
+    //     }
 
 
 
