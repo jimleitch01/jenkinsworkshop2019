@@ -12,6 +12,7 @@ pipeline {
             }
         }
 
+        input message: 'mag ik doorgaan?', parameters: [choice(choices: ['ja', 'nee'], description: '', name: 'doorgaan')]
         stage('Stage Two') {
             steps {
                 sh '''
