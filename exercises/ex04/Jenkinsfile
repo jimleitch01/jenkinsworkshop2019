@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('Stage One') {
             steps {
-                sh 'echo My Build Number is: ${BUILD_NUMBER} branch: ${BRANCH_NUMBER} ${CHANGE_TARGET} change target: For a multibranch project corresponding to some kind of change request, this will be set to the target or base branch to which the change could be merged, if supported; else unset. ${BUILD_NUMBER} build number: The current build number, such as "153" ' 
+                sh 'echo My Build Number is: ${BUILD_NUMBER} '
+                sh 'echo branch: ${BRANCH_NUMBER}' 
             }
         }
 
