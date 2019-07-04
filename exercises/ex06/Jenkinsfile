@@ -15,11 +15,14 @@ pipeline {
     stage('run-parallel-branches') {
   steps {
     parallel(
-      a: {
+      1: {
         echo "This is branch a"
       },
-      b: {
+      2: {
         echo "This is branch b"
+      },
+      3: {
+        echo "This is branch 3"
       }
     )
   }
