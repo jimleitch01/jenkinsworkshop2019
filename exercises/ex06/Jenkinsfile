@@ -9,7 +9,7 @@ pipeline {
                 sh '''
                     echo Stage One
                 '''
-                sh date -u
+                sh "date -u"
             }
         }
 
