@@ -1,27 +1,25 @@
-// EXERCISE 03
+// EX04
 
 pipeline {
     agent any
 
     stages {
-        stage('Build Stage') {
+        stage('Stage One') {
             steps {
-                sh 'echo Here are some vars'
-                sh 'echo Build Number is ${BUILD NUMBER}'
+                sh '''
+                    echo Stage One
+                '''
             }
         }
+
+        stage('Stage Two') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
+
+
         }
     }
-
-
-    // stages {
-    //     stage('Build Stage') {
-    //         steps {
-    //             sh '''
-                    //     echo Here are some vars
-                    //     echo Build Number is ${BUILD NUMBER}
-                    // '''
-    //         }
-    //     }
-    //     }
-    // }

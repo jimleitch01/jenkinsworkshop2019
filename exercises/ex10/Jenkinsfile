@@ -1,15 +1,25 @@
-// EXERCISE 10
+// EX10
 
 pipeline {
     agent any
 
     stages {
-        stage('Build Stage') {
+        stage('Stage One') {
             steps {
-                echo 'Fake Building..'
+                sh '''
+                    echo Stage One
+                '''
             }
         }
+
+        stage('Stage Two') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
+
+
         }
     }
-
-

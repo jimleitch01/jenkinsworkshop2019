@@ -1,25 +1,25 @@
+// EX06
+
 pipeline {
     agent any
 
     stages {
+        stage('Stage One') {
+            steps {
+                sh '''
+                    echo Stage One
+                '''
+            }
+        }
 
-stage('run-parallel-branches') {
-  steps {
-    parallel(
-      a: {
-        echo "This is branch a"
-      },
-      b: {
-        echo "This is branch b"
-      }
-    )
-  }
-}
+        stage('Stage Two') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
 
-  
-  
+
         }
     }
-
-
-
