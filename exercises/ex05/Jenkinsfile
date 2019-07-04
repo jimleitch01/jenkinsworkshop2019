@@ -12,11 +12,21 @@ pipeline {
             }
         }
 
-        stage('Stage Two') {
-            steps {
-                sh '''
-                    echo in a galaxy
-                '''
+        parallel {
+            stage('Stage Two') {
+                steps {
+                    sh '''
+                        echo in a galaxy
+                    '''
+                }
+            }
+
+            stage('Stage Two.five') {
+                steps {
+                    sh '''
+                        echo in a land
+                    '''
+                }
             }
         }
 
@@ -24,10 +34,9 @@ pipeline {
             steps {
                 sh '''
                     echo far far away
-                    echo Today is Thursday.
                 '''
             }
         }
 
-        }
     }
+}
