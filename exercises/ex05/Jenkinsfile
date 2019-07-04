@@ -7,7 +7,7 @@ pipeline {
         stage('Stage One') {
             steps {
                 sh '''
-                    echo Stage One
+                    echo Once upon a time,
                 '''
             }
         }
@@ -15,11 +15,18 @@ pipeline {
         stage('Stage Two') {
             steps {
                 sh '''
-                    echo Stage Two
+                    echo in a galaxy
                 '''
             }
         }
 
+        stage('Stage Three') {
+            steps {
+                sh '''
+                    echo far far away
+                '''
+            }
+        }
 
         }
     }
