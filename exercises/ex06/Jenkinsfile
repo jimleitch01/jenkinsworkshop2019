@@ -28,11 +28,11 @@ pipeline {
     stage('run-parallel-branches-2') {
   steps {
     parallel(
-      1: {
-        echo "This is branch 1"
+      c: {
+        echo "This is branch c"
       },
-      2: {
-        echo "This is branch 2"
+      d: {
+        echo "This is branch d"
       }
     )
   }
