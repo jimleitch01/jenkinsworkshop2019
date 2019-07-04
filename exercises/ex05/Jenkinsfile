@@ -15,11 +15,18 @@ pipeline {
         stage('Stage Two') {
             steps {
                 sh '''
-                    echo Stage Two
+                    echo Stage Two, Sander
                 '''
             }
         }
 
+        stage('Stage Bijna weekend') {
+            steps {
+                sh '''
+                    echo Stage Two, Sander
+                '''
+            }
+        }
 
         }
     }
