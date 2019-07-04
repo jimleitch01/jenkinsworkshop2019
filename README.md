@@ -330,6 +330,10 @@ Show Workflow and run thru a few times
 
 ### Exercise 04  Shell & Variables
 
+http://jenkins.jws2019.test-rig.net:8080/env-vars.html/
+
+
+
 ### Exercise 05  Blocks
 
 ### Exercise 06  Parallel Running

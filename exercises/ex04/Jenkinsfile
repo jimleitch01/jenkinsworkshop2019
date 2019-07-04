@@ -1,10 +1,13 @@
+// EXERCISE 03
+
 pipeline {
     agent any
 
     stages {
         stage('Build Stage') {
             steps {
-                echo 'Fake Building..'
+                sh 'echo Here are some vars'
+                sh 'echo Build Number is ${BUILD NUMBER}'
             }
         }
         }
