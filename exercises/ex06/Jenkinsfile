@@ -15,14 +15,14 @@ pipeline {
     stage('run-parallel-branches') {
   steps {
     parallel(
-      1: {
-        echo "This is branch a"
+      mac: {
+        echo "This is branch mac"
       },
-      2: {
-        echo "This is branch b"
+      win: {
+        echo "This is branch win"
       },
-      3: {
-        echo "This is branch 3"
+      lin: {
+        echo "This is branch lin"
       }
     )
   }
