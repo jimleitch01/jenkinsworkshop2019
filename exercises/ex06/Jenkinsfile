@@ -24,11 +24,11 @@ pipeline {
       c: {
         echo "This is branch c"
       }
-      
     )
   }
 }
-
+    }
+} 
 
  
 
