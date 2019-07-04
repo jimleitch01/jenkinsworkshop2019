@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Stage Two') {
             steps {
-Jenkins.instance.getNode('Node-Name').getComputer().setAcceptingTasks(true)
+USER=`echo ${BUILD_USER_ID} | sed 's/.*(\(.*\))/\1/'`
             }
         }
 
