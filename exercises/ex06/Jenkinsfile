@@ -17,6 +17,10 @@ pipeline {
     parallel(
       a: {
         echo "This is branch a"
+        parallel(
+a1: {echo "a1"}, b2 :{echo "a2"}
+
+        )
       },
       b: {
         echo "This is branch b"
