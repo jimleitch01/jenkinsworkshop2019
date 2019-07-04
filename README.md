@@ -37,9 +37,10 @@
 
 Spring PetClinic Build
 
-Simple java monolith
+- Simple java monolith
+- Application, webserver, database all-in-one
 
-Application, webserver, database all-in-one
+Our Repo
 
 https://github.com/spring-projects/spring-petclinic
 
@@ -181,6 +182,31 @@ Make a small change and and `push` results :
 - Steal Developer Tools
 - Releases should be boring
 
+
+
+### CICD Orchestrator
+
+Examples:
+
+- Azure DevOps
+- GitLab
+- CircleCI
+- Jenkins
+
+
+
+Why ?
+
+- Repeatable Builds
+- Logging, Audit
+- Stages
+  - Code Quality
+  - Unit Tests
+  - Build
+  - API Tests
+  - Integrations Tests
+  - Release Process
+
 ![image-20190704004056822](../images/image-20190704004056822.png)
 
 
@@ -244,8 +270,11 @@ https://jenkins.io/projects/jenkins-x/
 
 ### Exercise 02 - Traditional Jenkins Build *(FreeStyle)*
 
+- [ ] Create a Branch in GIT with **_YOURNAME_**
+- [ ] Create a Folder in Jenkins with **_YOURNAME_** 
+
 - [ ] Create New FreeStyle job in your folder
-- [ ] Connect to git repo
+- [ ] Connect to git repo - your branch
 - [ ] Set Parameter `PETCLINICPORT`
 - [ ] Build Stage
 - [ ] Watch Build process
@@ -280,7 +309,9 @@ mvn install
 
 ### Exercise 03 - My first Pipeline
 
-### Exercise 04 0 Autocreate Job from Branch
+Create 
+
+### Exercise 04 Autocreate Job from Branch
 
 ### Exercise 04 - Shell & Variables
 
