@@ -21,6 +21,27 @@ pipeline {
       b: {
         echo "This is branch b"
       }
+      c: {
+        echo "This is branch c"
+      }
+      b: {
+        echo "This is branch b"
+      }
+      b: {
+        echo "This is branch b"
+      }
+      b: {
+        echo "This is branch b"
+      }
+      b: {
+        echo "This is branch b"
+      }
+      b: {
+        echo "This is branch b"
+      }
+      b: {
+        echo "This is branch b"
+      }
     )
   }
 }
