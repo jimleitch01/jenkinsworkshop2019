@@ -7,8 +7,9 @@ pipeline {
         stage('Stage One') {
             steps {
                 sh 'echo My Build Number is: ${BUILD_NUMBER}'
-                sh 'echo My Branch Name is: ${BRANCHE_NAME}'
-                sh 'echo My git commit hash: ${GIT_COMMIT}' 
+                sh 'echo My Branch Name is: ${BRANCH_NAME}'
+                sh 'echo My git commit hash: ${GIT_COMMIT}'
+                sh 'echo committed by: ${GIT_COMMITTER_NAME}'
             }
         }
 
