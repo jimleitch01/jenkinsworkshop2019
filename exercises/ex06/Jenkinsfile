@@ -15,14 +15,14 @@ pipeline {
     stage('run-parallel-branches') {
   steps {
     parallel(
-      kanDItOokAndersHeten: {
+      UnitTest: {
         echo "1. This is branch a"
         echo "2. This is branch a"
       },
-      b: {
+      codeReview: {
         echo "This is branch b"
       },
-      c: {
+      ApiTest: {
         echo "This is branch c"
       }
     )
