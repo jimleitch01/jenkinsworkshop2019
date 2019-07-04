@@ -1,49 +1,31 @@
-// EXERCISE 03
-
-
-
-
-// pipeline {
-//     agent any
-
-//     stages {
-//         stage('Build Stage') {
-//             steps {
-//                 sh 'echo Not Really Building'
-//             }
-//         }
-//         }
-//     }
-
-
+// EX03
 
 pipeline {
-    agent any 
+    agent any
+
     stages {
-        stage('Example Build') {
+        stage('Stage One') {
             steps {
-                sh 'ls -l '
+                sh '''
+                    echo Stage One
+                '''
             }
         }
+
+        stage('Stage Two') {
+            steps {
+                sh '''
+                    echo Stage Two
+                '''
+            }
+        }
+
+
+        }
     }
-}
 
 
 
-
-    // stages {
-    //         stage('Build Stage') {
-    //             steps {
-    //                 sh '''
-                           set -x
-                           set -e
-    //                     mvn test
-    //                     mvn install
-    //                 '''
-    //             }
-    //         }
-    //         }
-    //     }
 
 
 

@@ -14,3 +14,14 @@ pipeline {
     }
 
 
+    // stages {
+    //     stage('Build Stage') {
+    //         steps {
+    //             sh '''
+                    //     echo Here are some vars
+                    //     echo Build Number is ${BUILD NUMBER}
+                    // '''
+    //         }
+    //     }
+    //     }
+    // }
