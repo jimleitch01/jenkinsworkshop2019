@@ -266,8 +266,11 @@ https://jenkins.io/projects/jenkins-x/
 - [ ] Login To Workstation
 - [ ] Git pull
 - [ ] Maven Build
+        mvn install
 - [ ] Java run
+        java -jar target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
 - [ ] See results
+        http://localhost:8080/
 - [ ] Make Change
 - [ ] Maven Build
 - [ ] Java Run 
