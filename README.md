@@ -31,16 +31,20 @@
 
 #### Who is Amazic ?
 
+Market Development
+
+Jenkins Training !
+
 #### Who is CloudBees ?
 
 #### What are Objectives ?
 
-Spring PetClinic Build
+##### Spring PetClinic Build
 
 - Simple java monolith
 - Application, webserver, database all-in-one
 
-Our Repo
+##### Our Repo
 
 https://github.com/spring-projects/spring-petclinic
 
@@ -50,6 +54,7 @@ https://github.com/spring-projects/spring-petclinic
 - Build on Workstation
 - Build on Jenkins (Tradtional - FreeStyle Job)
 - Declarative Pipelines !
+- [Terraform to build lab in Azure]
 
 
 
@@ -311,7 +316,7 @@ mvn install
 
 Create 
 
-Show Workflow and run thru a few tims
+Show Workflow and run thru a few times
 
 ### Exercise 04 Autocreate Job from Branch
 
@@ -321,7 +326,7 @@ Show Workflow and run thru a few tims
 
 ### Exercise 06 - Parallel Running
 
-### Exercise 07 - Using Plugins & Snipet Editr
+### Exercise 07 - Using Plugins & Snippet Editor
 
 ### Exercise 08 - Blue Ocean & Editor
 
