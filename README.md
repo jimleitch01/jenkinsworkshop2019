@@ -1,6 +1,6 @@
 #  Amazic Jenkins Pipeline Workshop
-
-#### 4th July 2019
+ 
+#### 4th July 2019 - COMPLETED !!!
 
 > In this free hands-on workshop you will learn how to create and run a Jenkins Declarative Pipeline using the Blue Ocean Editor. Participants will create a real-life Pipeline to build, test and deploy a Pipeline. The class ends with a quick tour of Pipeline capabilities that provide fit and finish to your Pipeline.
 >
@@ -64,28 +64,13 @@ https://github.com/spring-projects/spring-petclinic
 
 - [ ] Instal MS RDP client on your laptop !
 
-**Username:** `workshop`
+**Username:** `xxxx`
 
-**Password:** `00AB@-equation-blue-major`
+**Password:** `xxxx`
 
 | Name       | RDP Connection                              |
 | ---------- | ------------------------------------------- |
-| Alessandro | jws2019.westeurope.cloudapp.azure.com:50000 |
-| Marcel     | jws2019.westeurope.cloudapp.azure.com:50001 |
-| Arend      | jws2019.westeurope.cloudapp.azure.com:50002 |
-| Johannes   | jws2019.westeurope.cloudapp.azure.com:50003 |
-| Laurens    | jws2019.westeurope.cloudapp.azure.com:50004 |
-| Tiemco     | jws2019.westeurope.cloudapp.azure.com:50005 |
-| Arnold     | jws2019.westeurope.cloudapp.azure.com:50006 |
-| John       | jws2019.westeurope.cloudapp.azure.com:50007 |
-| Alex       | jws2019.westeurope.cloudapp.azure.com:50008 |
-| Bas        | jws2019.westeurope.cloudapp.azure.com:50009 |
-| Klaas      | jws2019.westeurope.cloudapp.azure.com:50010 |
-| Mark       | jws2019.westeurope.cloudapp.azure.com:50011 |
-| Jeffrey    | jws2019.westeurope.cloudapp.azure.com:50012 |
-| Eric       | jws2019.westeurope.cloudapp.azure.com:50013 |
-| Sander     | jws2019.westeurope.cloudapp.azure.com:50014 |
-| Johan      | jws2019.westeurope.cloudapp.azure.com:50015 |
+| xxx | xxx:xx |
 
 
 
@@ -118,9 +103,9 @@ http://jenkins.jws2019.test-rig.net:8080/
 
 `ssh workshop@jenkins.jws2019.test-rig.net`
 
-**Username:** `workshop`
+**Username:** `xxxx`
 
-**Password:** `00AB@-equation-blue-major`
+**Password:** `xxxxx`
 
 
 
